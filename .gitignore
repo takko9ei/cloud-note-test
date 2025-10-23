@@ -1,0 +1,91 @@
+# ===================================================
+# 核心忽略文件 (Core Ignores)
+# ===================================================
+
+# 操作系统文件
+# operating system files
+.DS_Store
+Thumbs.db
+
+# ===================================================
+# 1. 后端 (Java/Spring Boot - Maven) 忽略规则
+# 1.backend ignore rules
+# 路径: /backend/
+# ===================================================
+
+# Maven 编译输出目录
+# Maven build output directory
+/backend/target/
+
+# 临时文件
+# Temporary files
+/backend/bin/
+
+# 调试和日志文件
+/backend/*.log
+/backend/log/
+/backend/output.log
+
+# ===================================================
+# 2. 前端 (Node/React/Vite/CRA) 忽略规则
+# 2.frontend ignore rules
+# 路径: /frontend/
+# ===================================================
+
+# Node 依赖安装目录
+# Node modules directory
+/frontend/node_modules/
+
+# 编译输出目录 (Vite/CRA 默认或配置)
+# Build output directories
+/frontend/dist/
+/frontend/build/
+
+# 本地配置和环境变量文件 (重要：保护敏感信息)
+# Local configuration and environment variable files
+/frontend/.env
+/frontend/.env.*
+
+# 各种锁文件和临时文件
+# lock files and temp files
+/frontend/npm-debug.log*
+/frontend/yarn-error.log*
+/frontend/.vite/
+/frontend/coverage/
+
+# ===================================================
+# 3. IDE 及编辑器配置忽略 (VS Code, IntelliJ IDEA)
+# ===================================================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# 排除 .vscode/settings.json, launch.json, tasks.json 等配置，
+# 但忽略缓存文件和workspace设置。
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.vscode/*.local
+
+# Eclipse
+.project
+.classpath
+.settings/
+*.log
+
+# ===================================================
+# 4. 数据库配置database configuration files
+# ===================================================
+
+# 忽略所有包含敏感数据库凭证的配置文件 ignore all configuration files containing sensitive database credentials
+application-local.properties
+application-local.yml
+/backend/src/main/resources/application-local.*
